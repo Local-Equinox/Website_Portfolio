@@ -9,13 +9,13 @@
 
 export const profile = {
   // [INSERT: FULL NAME (e.g., John Erwin F. Cadiz)]
-  name: "[INSERT: FULL NAME (e.g., John Erwin F. Cadiz)]",
+  name: "John Erwin F. Cadiz",
 
   // [INSERT: HEADLINE/ROLE (e.g., BSIT Student & Full-Stack Developer)]
-  role: "[INSERT: HEADLINE/ROLE (e.g., BSIT Student & Full-Stack Developer)]",
+  role: "BS in Information Technology Student",
 
   // [INSERT: YEAR LEVEL & UNIVERSITY (e.g., 2nd-Year BSIT at MSU-IIT)]
-  education: "[INSERT: YEAR LEVEL & UNIVERSITY (e.g., 2nd-Year BSIT at MSU-IIT)]",
+  education: "2nd-Year BSIT at Mindanao State University - Iligan Institute of Technology (MSU-IIT)",
 
   // [INSERT: PROFILE PHOTO URL]
   // Put your photo in public/images/ and write its path WITHOUT a leading
@@ -24,13 +24,13 @@ export const profile = {
   photo: "[INSERT: PROFILE PHOTO URL]",
 
   // [INSERT: SHORT BIO/ABOUT ME]
-  bio: "[INSERT: SHORT BIO/ABOUT ME]",
+  bio: "Aspiring and diligent Software Engineer, interested in the field of Machine Learning and Artificial Intelligence and also Robotics.",
 };
 
 // [INSERT: TECH STACK ARRAY (e.g., Java, Python, React)]
 // Write one string per technology: ["Java", "Python", "React"]
 // The first 4 also appear on the floating card in the light-mode hero.
-export const techStack = ["[INSERT: TECH STACK ARRAY (e.g., Java, Python, React)]"];
+export const techStack = ["Java", "Python", "React", "CSS", "HTML"];
 
 // Add or remove objects here to change how many projects are shown.
 // `image`, `liveUrl` and `repoUrl` are optional: use "" to leave one out.
@@ -59,7 +59,7 @@ export const projects = [
 // `icon` can be "github", "linkedin", "mail" or "link" (any other website).
 // Email format: "mailto:you@example.com"
 export const socials = [
-  { label: "GitHub", icon: "github", url: "[INSERT: SOCIAL/GITHUB LINKS: GITHUB URL]" },
-  { label: "LinkedIn", icon: "linkedin", url: "[INSERT: SOCIAL/GITHUB LINKS: LINKEDIN URL]" },
-  { label: "Email", icon: "mail", url: "[INSERT: SOCIAL/GITHUB LINKS: mailto:YOUR EMAIL]" },
+  { label: "GitHub", icon: "github", url: "https://github.com/Local-Equinox" },
+  { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/johnerwincadiz/" },
+  { label: "Email", icon: "mail", url: "johnerwincadiz20@gmail.com" },
 ];
