@@ -24,7 +24,7 @@ export const profile = {
   photo: "images/profile.JPG",
 
   // [INSERT: SHORT BIO/ABOUT ME]
-  bio: "Aspiring and diligent Software Engineer, interested in the field of Machine Learning and Artificial Intelligence and also Robotics.",
+  bio: "An aspiring and diligent Software Engineer, interested in the field of Machine Learning and Artificial Intelligence and also Robotics.",
 };
 
 // [INSERT: TECH STACK ARRAY (e.g., Java, Python, React)]
