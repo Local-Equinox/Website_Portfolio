@@ -21,7 +21,7 @@ export const profile = {
   // Put your photo in public/images/ and write its path WITHOUT a leading
   // slash, e.g. "images/profile.jpg". A full https:// URL also works.
   // A portrait (4:5) crop looks best.
-  photo: "public/images/profile.JPG",
+  photo: "images/profile.JPG",
 
   // [INSERT: SHORT BIO/ABOUT ME]
   bio: "Aspiring and diligent Software Engineer, interested in the field of Machine Learning and Artificial Intelligence and also Robotics.",
