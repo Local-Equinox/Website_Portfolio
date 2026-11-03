@@ -74,16 +74,16 @@ export const socials = [
 // it, because the site hosting the file decides that.
 export const downloads = {
   // [INSERT: RESUME DOWNLOAD LINK]
-  resume: "[INSERT: RESUME DOWNLOAD LINK]",
+  resume: "files/resume:cv.pdf",
 
   // [INSERT: CV DOWNLOAD LINK]
-  cv: "[INSERT: CV DOWNLOAD LINK]",
+  cv: "files/resume:cv.pdf",
 };
 
 // Used on the Privacy page.
 export const privacy = {
   // [INSERT: HOSTING PROVIDER (e.g., GitHub Pages, Vercel, Netlify)]
-  hostingProvider: "[INSERT: HOSTING PROVIDER (e.g., GitHub Pages, Vercel, Netlify)]",
+  hostingProvider: "GitHub Pages, Vercel]",
 
   // Change this date whenever you change the Privacy page.
   lastUpdated: "November 3, 2026",
