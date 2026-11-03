@@ -61,5 +61,5 @@ export const projects = [
 export const socials = [
   { label: "GitHub", icon: "github", url: "https://github.com/Local-Equinox" },
   { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/johnerwincadiz/" },
-  { label: "Email", icon: "mail", url: "johnerwincadiz20@gmail.com" },
+  { label: "Email", icon: "mail", url: "mailto:johnerwincadiz20@gmail.com" },
 ];
