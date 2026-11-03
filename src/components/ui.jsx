@@ -17,6 +17,22 @@ export function SmartLink({ href, children, ...props }) {
   );
 }
 
+/** Turns a Google Drive share link into its direct-download form. */
+const directDownloadUrl = (url) => {
+  const driveFile = url.match(/drive\.google\.com\/file\/d\/([^/?#]+)/);
+  return driveFile ? `https://drive.google.com/uc?export=download&id=${driveFile[1]}` : url;
+};
+
+/** A link that downloads a file, or the pink marker if its URL is still unfilled. */
+export function DownloadLink({ href, children, ...props }) {
+  if (isPlaceholder(href)) return <Field value={href} />;
+  return (
+    <SmartLink href={directDownloadUrl(href)} download {...props}>
+      {children}
+    </SmartLink>
+  );
+}
+
 /** Shared section frame: anchor target, small label and large heading. */
 export function Section({ id, label, title, children }) {
   return (

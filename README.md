@@ -35,3 +35,18 @@ image: "images/project-1.jpg",   // project screenshot (16:9) crop looks best
 ```
 
 Full `https://` image URLs also work.
+
+## Add your resume and CV
+
+Set `downloads.resume` and `downloads.cv` in `src/content.js`. The most reliable option is to put the PDFs in `public/files/`:
+
+```js
+resume: "files/resume.pdf",
+cv: "files/cv.pdf",
+```
+
+Google Drive share links also work once the file is shared with "Anyone with the link". Links from other sites may open the file in a new tab instead of downloading it.
+
+## Privacy page
+
+The page is in `src/components/Privacy.jsx` and opens at `#privacy`. Set your host in `privacy.hostingProvider` in `src/content.js`. The page says the site has no analytics or tracking cookies, so update it if you ever add them.

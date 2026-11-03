@@ -27,6 +27,12 @@ export const ArrowUpRight = (props) => (
   </svg>
 );
 
+export const Download = (props) => (
+  <svg {...stroke} {...props}>
+    <path d="M12 4v11M7 11l5 5 5-5M5 20h14" />
+  </svg>
+);
+
 export const GraduationCap = (props) => (
   <svg {...stroke} {...props}>
     <path d="M2 9.5 12 5l10 4.5L12 14 2 9.5z" />

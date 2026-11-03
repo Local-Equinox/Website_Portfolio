@@ -63,3 +63,28 @@ export const socials = [
   { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/johnerwincadiz/" },
   { label: "Email", icon: "mail", url: "mailto:johnerwincadiz20@gmail.com" },
 ];
+
+// Download links for the footer's "Resume" link and the About section's
+// "Download CV" button. Either way of adding a file works:
+//   1. Most reliable: put the PDF in public/files/ and write its path WITHOUT
+//      a leading slash, e.g. "files/resume.pdf".
+//   2. Paste a Google Drive share link. Set its sharing to "Anyone with the
+//      link" first; the site converts it to a direct download automatically.
+// Links from other sites may open the file in a new tab instead of downloading
+// it, because the site hosting the file decides that.
+export const downloads = {
+  // [INSERT: RESUME DOWNLOAD LINK]
+  resume: "[INSERT: RESUME DOWNLOAD LINK]",
+
+  // [INSERT: CV DOWNLOAD LINK]
+  cv: "[INSERT: CV DOWNLOAD LINK]",
+};
+
+// Used on the Privacy page.
+export const privacy = {
+  // [INSERT: HOSTING PROVIDER (e.g., GitHub Pages, Vercel, Netlify)]
+  hostingProvider: "[INSERT: HOSTING PROVIDER (e.g., GitHub Pages, Vercel, Netlify)]",
+
+  // Change this date whenever you change the Privacy page.
+  lastUpdated: "November 3, 2026",
+};

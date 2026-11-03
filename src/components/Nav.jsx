@@ -34,10 +34,11 @@ function useTheme() {
 }
 
 /** Tracks which section currently crosses the middle of the viewport. */
-function useActiveSection() {
+function useActiveSection(isPrivacy) {
   const [active, setActive] = useState(TABS[0].id);
 
   useEffect(() => {
+    if (isPrivacy) return; // the sections aren't on screen
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -48,9 +49,9 @@ function useActiveSection() {
     );
     for (const { id } of TABS) observer.observe(document.getElementById(id));
     return () => observer.disconnect();
-  }, []);
+  }, [isPrivacy]);
 
-  return active;
+  return isPrivacy ? null : active;
 }
 
 function initials(name) {
@@ -81,8 +82,8 @@ function ThemeSwitch() {
   );
 }
 
-export default function Nav() {
-  const active = useActiveSection();
+export default function Nav({ isPrivacy }) {
+  const active = useActiveSection(isPrivacy);
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-page/80 backdrop-blur-md">
