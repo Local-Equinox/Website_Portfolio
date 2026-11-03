@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* Theme is driven by a "dark" class on <html>, not the OS setting. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens: each resolves to a different value per theme, below. */
+@theme inline {
+  --font-sans: "Space Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+
+  --radius-card: var(--card-radius);
+  --radius-control: var(--control-radius);
+  --shadow-soft: var(--soft-shadow);
+
+  --animate-swing: swing 7s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes swing {
+    0%, 100% { transform: rotate(-1.4deg); }
+    50% { transform: rotate(1.4deg); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+/* Light mode: clean, rounded, soft shadows. */
+:root {
+  color-scheme: light;
+  --page: #f4f4f6;
+  --surface: #ffffff;
+  --ink: #15161a;
+  --muted: #5b5d68;
+  --line: #e2e3e9;
+  --accent: #3b7508;
+  --on-accent: #ffffff;
+  --slot: #c4005f;
+  --card-radius: 1.75rem;
+  --control-radius: 999px;
+  --soft-shadow: 0 24px 60px -18px rgb(30 32 60 / 0.22), 0 6px 16px -6px rgb(30 32 60 / 0.1);
+}
+
+/* Dark mode: near-black, sharper corners, flat surfaces. */
+.dark {
+  color-scheme: dark;
+  --page: #08090b;
+  --surface: #111317;
+  --ink: #f4f5f6;
+  --muted: #a0a2ab;
+  --line: #26282e;
+  --accent: #b9f33c;
+  --on-accent: #0b0d05;
+  --slot: #ff6bb0;
+  --card-radius: 0.75rem;
+  --control-radius: 0.5rem;
+  --soft-shadow: none;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px; /* the sticky nav's height, border included */
+    background: var(--page);
+  }
+  body {
+    /* No background here: an opaque body would paint over .grid-backdrop. */
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  /* The pink marker shown wherever a value in content.js is still unfilled. */
+  .slot {
+    display: inline-block;
+    max-width: 100%;
+    padding: 0.2em 0.5em;
+    border: 1.5px dashed var(--slot);
+    border-radius: 0.375rem;
+    background: color-mix(in srgb, var(--slot) 10%, transparent);
+    color: var(--slot);
+    font-family: var(--font-mono);
+    font-size: min(var(--slot-size, 0.875rem), 1em);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    text-align: left;
+    text-transform: none;
+  }
+
+  /* Dark-mode page background. */
+  .grid-backdrop {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.055) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 90% 75% at 50% 0%, black 30%, transparent 100%);
+  }
+
+  /* The woven lanyard strap on the ID card. */
+  .lanyard {
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--accent) 0 7px,
+      color-mix(in srgb, var(--accent) 72%, black) 7px 14px
+    );
+  }
+
+  /* The decorative barcode on the ID card. */
+  .barcode {
+    background: repeating-linear-gradient(
+      90deg,
+      var(--ink) 0 2px,
+      transparent 2px 5px,
+      var(--ink) 5px 6px,
+      transparent 6px 9px,
+      var(--ink) 9px 12px,
+      transparent 12px 14px
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
