@@ -29,7 +29,6 @@ export const profile = {
 
 // [INSERT: TECH STACK ARRAY (e.g., Java, Python, React)]
 // Write one string per technology: ["Java", "Python", "React"]
-// Used in the About section and the Portfolio section's "Tech Stack" tab.
 // The first 4 also appear on the floating card in the light-mode hero.
 export const techStack = ["Java", "Python", "React", "JavaScript", "CSS", "HTML"];
 
@@ -102,17 +101,38 @@ export const certificates = [
   */
 ];
 
-// The "Personal Details" block in the About section. Your name comes from
-// `profile` above and your email from `socials` below.
-export const personalDetails = {
-  // [INSERT: PLACE OF BIRTH (e.g., City, Country)]
-  placeOfBirth: "[INSERT: PLACE OF BIRTH (e.g., City, Country)]",
-
-  // [INSERT: CGPA (e.g., 1.50)]
-  cgpa: "1.55",
-
-  education: "Mindanao State University - Iligan Institute of Technology",
-};
+// The Portfolio section's "Education" tab, shown in this order. `program` is
+// optional: use "" to leave it out.
+export const education = [
+  {
+    // [INSERT: ELEMENTARY SCHOOL DETAILS]
+    level: "Elementary",
+    school: "[INSERT: ELEMENTARY SCHOOL NAME]",
+    program: "",
+    years: "[INSERT: ELEMENTARY YEARS (e.g., 2012 - 2018)]",
+  },
+  {
+    // [INSERT: JUNIOR HIGH SCHOOL DETAILS]
+    level: "Junior High School",
+    school: "[INSERT: JUNIOR HIGH SCHOOL NAME]",
+    program: "",
+    years: "[INSERT: JUNIOR HIGH YEARS (e.g., 2018 - 2022)]",
+  },
+  {
+    // [INSERT: SENIOR HIGH SCHOOL DETAILS]
+    level: "Senior High School",
+    school: "[INSERT: SENIOR HIGH SCHOOL NAME]",
+    program: "[INSERT: SENIOR HIGH STRAND (e.g., STEM)]",
+    years: "[INSERT: SENIOR HIGH YEARS (e.g., 2022 - 2024)]",
+  },
+  {
+    level: "College",
+    school: "Mindanao State University - Iligan Institute of Technology (MSU-IIT)",
+    program: "BS in Information Technology, 2nd Year",
+    // [INSERT: COLLEGE YEARS (e.g., 2024 - Present)]
+    years: "[INSERT: COLLEGE YEARS (e.g., 2024 - Present)]",
+  },
+];
 
 // [INSERT: SOCIAL/GITHUB LINKS]
 // `icon` can be "github", "linkedin", "mail" or "link" (any other website).

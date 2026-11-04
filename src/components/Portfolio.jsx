@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
-import { certificates, projects, techStack } from "../content.js";
+import { certificates, education, projects } from "../content.js";
 import { Chip, Field, Section, SmartLink, isPlaceholder } from "./ui.jsx";
 import { ArrowUpRight } from "./Icons.jsx";
 
@@ -22,7 +22,7 @@ function ProjectCard({ project, index }) {
   const number = String(index + 1).padStart(2, "0");
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-card border border-line bg-surface shadow-soft transition-transform duration-300 hover:-translate-y-1">
+    <article className="flex w-full flex-col overflow-hidden rounded-card border border-line bg-surface shadow-soft transition-transform duration-300 hover:-translate-y-1 md:w-[calc(50%-1rem)]">
       <div className="relative grid aspect-video place-items-center overflow-hidden bg-line/40 p-4">
         {image && !isPlaceholder(image) ? (
           <img
@@ -49,7 +49,7 @@ function ProjectCard({ project, index }) {
           <Field value={description} />
         </p>
 
-        <ul className="mt-5 flex flex-wrap gap-2">
+        <ul className="mt-5 flex flex-wrap justify-center gap-2">
           {tech.map((item) => (
             <Chip key={item}>
               <Field value={item} />
@@ -57,7 +57,7 @@ function ProjectCard({ project, index }) {
           ))}
         </ul>
 
-        <div className="mt-auto flex flex-wrap gap-x-6 gap-y-2 pt-6">
+        <div className="mt-auto flex flex-wrap justify-center gap-x-6 gap-y-2 pt-6">
           <ProjectLink href={liveUrl} label="Live demo" />
           <ProjectLink href={repoUrl} label="Source code" />
         </div>
@@ -70,7 +70,7 @@ function CertificateCard({ certificate }) {
   const { title, issuer, date, image, url } = certificate;
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-card border border-line bg-surface shadow-soft transition-transform duration-300 hover:-translate-y-1">
+    <article className="flex w-full flex-col overflow-hidden rounded-card border border-line bg-surface shadow-soft transition-transform duration-300 hover:-translate-y-1 sm:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)]">
       {image && (
         <div className="grid aspect-[4/3] place-items-center overflow-hidden bg-line/40 p-3">
           {isPlaceholder(image) ? (
@@ -106,12 +106,39 @@ function CertificateCard({ certificate }) {
   );
 }
 
+function EducationList() {
+  return (
+    <ol className="mx-auto max-w-2xl">
+      {education.map(({ level, school, program, years }, index) => (
+        <li key={level}>
+          {/* Connector linking each school to the next. */}
+          {index > 0 && <div aria-hidden className="mx-auto h-8 w-px bg-line" />}
+          <article className="rounded-card border border-line bg-surface p-6 shadow-soft sm:p-8">
+            <p className="font-mono text-sm text-accent">{level}</p>
+            <h3 className="mt-2 text-xl font-bold tracking-tight sm:text-2xl">
+              <Field value={school} />
+            </h3>
+            {program && (
+              <p className="mt-2 text-muted">
+                <Field value={program} />
+              </p>
+            )}
+            <p className="mt-2 font-mono text-sm text-muted">
+              <Field value={years} />
+            </p>
+          </article>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
 const TABS = [
   {
     id: "projects",
     label: "Projects",
     content: (
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="flex flex-wrap justify-center gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} index={index} />
         ))}
@@ -122,7 +149,7 @@ const TABS = [
     id: "certificates",
     label: "Certificates",
     content: (
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-wrap justify-center gap-8">
         {certificates.map((certificate, index) => (
           <CertificateCard key={index} certificate={certificate} />
         ))}
@@ -130,30 +157,9 @@ const TABS = [
     ),
   },
   {
-    id: "tech",
-    label: "Tech Stack",
-    content: (
-      <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-        {techStack.map((tech) => (
-          <li
-            key={tech}
-            className="flex min-w-0 items-center gap-3 rounded-card border border-line bg-surface p-4 font-semibold shadow-soft sm:p-5"
-          >
-            {!isPlaceholder(tech) && (
-              <span
-                aria-hidden
-                className="grid h-10 w-10 shrink-0 place-items-center rounded-control bg-accent/10 font-mono text-accent"
-              >
-                {tech[0]}
-              </span>
-            )}
-            <span className="min-w-0 [overflow-wrap:anywhere]">
-              <Field value={tech} />
-            </span>
-          </li>
-        ))}
-      </ul>
-    ),
+    id: "education",
+    label: "Education",
+    content: <EducationList />,
   },
 ];
 
@@ -181,7 +187,7 @@ function TabBar({ active, onSelect }) {
       role="tablist"
       aria-label="Portfolio categories"
       onKeyDown={onKeyDown}
-      className="grid max-w-3xl grid-cols-3 gap-1 rounded-card border border-line bg-surface p-1.5 shadow-soft"
+      className="mx-auto grid max-w-3xl grid-cols-3 gap-1 rounded-card border border-line bg-surface p-1.5 shadow-soft"
     >
       {TABS.map(({ id, label }) => {
         const selected = id === active;
@@ -222,11 +228,11 @@ export default function Portfolio() {
   const { content } = TABS.find((tab) => tab.id === active);
 
   return (
-    <Section id="portfolio" label="Portfolio" title="Portfolio Showcase">
+    <Section id="portfolio" label="Portfolio" title="Portfolio Showcase" centered>
       {/* reducedMotion="user" turns these animations off for visitors who ask for less motion. */}
       <MotionConfig reducedMotion="user">
-        <p className="-mt-6 mb-8 max-w-2xl text-lg text-muted">
-          A look at my projects, certifications and technical skills.
+        <p className="mx-auto -mt-6 mb-8 max-w-2xl text-lg text-muted">
+          A look at my projects, certifications and education.
         </p>
 
         <TabBar active={active} onSelect={setActive} />

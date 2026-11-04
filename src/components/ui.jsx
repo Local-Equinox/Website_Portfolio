@@ -33,16 +33,22 @@ export function DownloadLink({ href, children, ...props }) {
   );
 }
 
-/** Shared section frame: anchor target, small label and large heading. */
-export function Section({ id, label, title, children }) {
+/**
+ * Shared section frame: anchor target, small label and large heading.
+ * `centered` centers the heading and content; the label always stays on the left.
+ */
+export function Section({ id, label, title, centered = false, children }) {
+  const align = centered ? "text-center" : "";
   return (
     <section id={id} className="border-t border-line">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
         <p className="font-mono text-sm text-accent">{label}</p>
-        <h2 className="mt-3 text-4xl font-bold tracking-tight text-balance sm:text-6xl dark:uppercase">
+        <h2
+          className={`mt-3 text-4xl font-bold tracking-tight text-balance sm:text-6xl dark:uppercase ${align}`}
+        >
           {title}
         </h2>
-        <div className="mt-12">{children}</div>
+        <div className={`mt-12 ${align}`}>{children}</div>
       </div>
     </section>
   );

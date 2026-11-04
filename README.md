@@ -36,9 +36,9 @@ image: "images/project-1.jpg",   // project screenshot (16:9) crop looks best
 
 Full `https://` image URLs also work.
 
-## Certificates and personal details
+## Certificates and education
 
-Fill in `certificates` and `personalDetails` in `src/content.js`. Certificate images go in `public/images/`. The Portfolio section's Tech Stack tab uses the existing `techStack` list.
+Fill in `certificates` and `education` in `src/content.js`. Certificate images go in `public/images/`.
 
 ## ID card animation
 
