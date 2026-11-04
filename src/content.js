@@ -62,7 +62,7 @@ export const socials = [
   { label: "GitHub", icon: "github", url: "https://github.com/Local-Equinox" },
   { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/johnerwincadiz/" },
   { label: "Email", icon: "mail", url: "mailto:johnerwincadiz20@gmail.com" },
-  { label: "Instagram", icon: "intagram", url: "https://www.instagram.com/gah.gah7/"}
+  { label: "Instagram", icon: "instagram", url: "https://www.instagram.com/gah.gah7/"}
 ];
 
 // Download links for the footer's "Resume" link and the About section's
