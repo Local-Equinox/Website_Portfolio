@@ -20,13 +20,13 @@
   --radius-control: var(--control-radius);
   --shadow-soft: var(--soft-shadow);
 
-  --animate-swing: swing 7s ease-in-out infinite;
+  /* MSU-IIT lanyard colors. */
+  --color-msu-maroon: #7a0019;
+  --color-msu-maroon-dark: #5c0013;
+  --color-msu-gold: #f2b71f;
+
   --animate-float: float 6s ease-in-out infinite;
 
-  @keyframes swing {
-    0%, 100% { transform: rotate(-1.4deg); }
-    50% { transform: rotate(1.4deg); }
-  }
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -108,13 +108,20 @@
     mask-image: radial-gradient(ellipse 90% 75% at 50% 0%, black 30%, transparent 100%);
   }
 
-  /* The woven lanyard strap on the ID card. */
+  /* The woven lanyard strap on the ID card: maroon weave with gold edges. */
   .lanyard {
-    background: repeating-linear-gradient(
-      -45deg,
-      var(--accent) 0 7px,
-      color-mix(in srgb, var(--accent) 72%, black) 7px 14px
-    );
+    background:
+      linear-gradient(
+        90deg,
+        var(--color-msu-gold) 0 3px,
+        transparent 3px calc(100% - 3px),
+        var(--color-msu-gold) calc(100% - 3px)
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        var(--color-msu-maroon) 0 8px,
+        var(--color-msu-maroon-dark) 8px 16px
+      );
   }
 
   /* The decorative barcode on the ID card. */

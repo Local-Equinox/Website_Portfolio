@@ -29,6 +29,7 @@ export const profile = {
 
 // [INSERT: TECH STACK ARRAY (e.g., Java, Python, React)]
 // Write one string per technology: ["Java", "Python", "React"]
+// Used in the About section and the Portfolio section's "Tech Stack" tab.
 // The first 4 also appear on the floating card in the light-mode hero.
 export const techStack = ["Java", "Python", "React", "JavaScript", "CSS", "HTML"];
 
@@ -53,7 +54,65 @@ export const projects = [
     liveUrl: "[INSERT: PROJECT 2 LIVE DEMO URL]",
     repoUrl: "[INSERT: PROJECT 2 GITHUB REPO URL]",
   },
+
+  /* template
+  {
+    // [INSERT: PORTFOLIO PROJECT 2 DETAILS]
+    title: "[INSERT: PORTFOLIO PROJECT 2 DETAILS: TITLE]",
+    description: "[INSERT: PORTFOLIO PROJECT 2 DETAILS: 1-2 SENTENCE DESCRIPTION]",
+    tech: ["[INSERT: PROJECT 2 TECH USED]"],
+    image: "[INSERT: PROJECT 2 IMAGE (e.g., images/project-2.jpg)]",
+    liveUrl: "[INSERT: PROJECT 2 LIVE DEMO URL]",
+    repoUrl: "[INSERT: PROJECT 2 GITHUB REPO URL]",
+  },
+  */
 ];
+
+// The Portfolio section's "Certificates" tab. Add or remove objects to change
+// how many are shown. Put certificate images in public/images/ and write the path
+// WITHOUT a leading slash. `date`, `image` and `url` are optional: use "" to leave
+// one out.
+export const certificates = [
+  {
+    // [INSERT: CERTIFICATE 1 DETAILS]
+    title: "[INSERT: CERTIFICATE 1 TITLE]",
+    issuer: "[INSERT: CERTIFICATE 1 ISSUING ORGANIZATION]",
+    date: "[INSERT: CERTIFICATE 1 DATE (e.g., June 2026)]",
+    image: "[INSERT: CERTIFICATE 1 IMAGE (e.g., images/certificate-1.jpg)]",
+    url: "[INSERT: CERTIFICATE 1 VERIFICATION LINK]",
+  },
+  {
+    // [INSERT: CERTIFICATE 2 DETAILS]
+    title: "[INSERT: CERTIFICATE 2 TITLE]",
+    issuer: "[INSERT: CERTIFICATE 2 ISSUING ORGANIZATION]",
+    date: "[INSERT: CERTIFICATE 2 DATE (e.g., June 2026)]",
+    image: "[INSERT: CERTIFICATE 2 IMAGE (e.g., images/certificate-2.jpg)]",
+    url: "[INSERT: CERTIFICATE 2 VERIFICATION LINK]",
+  },
+
+  /* template for certs
+  {
+    // [INSERT: CERTIFICATE 2 DETAILS]
+    title: "[INSERT: CERTIFICATE 2 TITLE]",
+    issuer: "[INSERT: CERTIFICATE 2 ISSUING ORGANIZATION]",
+    date: "[INSERT: CERTIFICATE 2 DATE (e.g., June 2026)]",
+    image: "[INSERT: CERTIFICATE 2 IMAGE (e.g., images/certificate-2.jpg)]",
+    url: "[INSERT: CERTIFICATE 2 VERIFICATION LINK]",
+  },
+  */
+];
+
+// The "Personal Details" block in the About section. Your name comes from
+// `profile` above and your email from `socials` below.
+export const personalDetails = {
+  // [INSERT: PLACE OF BIRTH (e.g., City, Country)]
+  placeOfBirth: "[INSERT: PLACE OF BIRTH (e.g., City, Country)]",
+
+  // [INSERT: CGPA (e.g., 1.50)]
+  cgpa: "1.55",
+
+  education: "Mindanao State University - Iligan Institute of Technology",
+};
 
 // [INSERT: SOCIAL/GITHUB LINKS]
 // `icon` can be "github", "linkedin", "mail" or "link" (any other website).

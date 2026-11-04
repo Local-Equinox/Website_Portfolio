@@ -36,6 +36,14 @@ image: "images/project-1.jpg",   // project screenshot (16:9) crop looks best
 
 Full `https://` image URLs also work.
 
+## Certificates and personal details
+
+Fill in `certificates` and `personalDetails` in `src/content.js`. Certificate images go in `public/images/`. The Portfolio section's Tech Stack tab uses the existing `techStack` list.
+
+## ID card animation
+
+The card is in `src/components/HangingIdCard.jsx`, built with [Framer Motion](https://motion.dev). The constants at the top of the file control how heavy the swing feels and how far the card can be pulled. The lanyard colors are the `--color-msu-*` values in `src/index.css`.
+
 ## Add your resume and CV
 
 Set `downloads.resume` and `downloads.cv` in `src/content.js`. The most reliable option is to put the PDFs in `public/files/`:

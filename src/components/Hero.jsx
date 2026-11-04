@@ -1,58 +1,7 @@
-import { useRef } from "react";
 import { profile, socials, techStack } from "../content.js";
 import { Field, Photo, SmartLink, isPlaceholder } from "./ui.jsx";
 import { ArrowUpRight, GraduationCap, Layers, socialIcons } from "./Icons.jsx";
-
-/** Dark-mode visual: an ID card hanging from a lanyard that tilts toward the mouse. */
-function HangingIdCard() {
-  const card = useRef(null);
-
-  const tilt = (event) => {
-    if (event.pointerType !== "mouse") return;
-    const box = event.currentTarget.getBoundingClientRect();
-    const x = (event.clientX - box.left) / box.width - 0.5;
-    const y = (event.clientY - box.top) / box.height - 0.5;
-    card.current.style.transform = `rotateY(${x * 22}deg) rotateX(${y * -16}deg)`;
-  };
-  const reset = () => {
-    card.current.style.transform = "";
-  };
-
-  return (
-    <div className="hidden origin-top motion-safe:animate-swing dark:block">
-      {/* Strap: starts at the top of the hero, so it appears to hang from the nav. */}
-      <div className="lanyard mx-auto h-16 w-6 lg:h-28" />
-      <div className="relative z-10 mx-auto -mt-1 h-5 w-9 rounded-sm border border-white/20 bg-gradient-to-b from-zinc-300 to-zinc-500" />
-
-      <div className="-mt-1 [perspective:900px]" onPointerMove={tilt} onPointerLeave={reset}>
-        <div
-          ref={card}
-          className="w-72 rounded-2xl border border-white/15 bg-gradient-to-br from-zinc-800 to-zinc-950 p-4 text-ink shadow-[0_40px_80px_-20px_rgb(0_0_0/0.9)] transition-transform duration-200 ease-out sm:w-80"
-        >
-          <div aria-hidden className="mx-auto h-2.5 w-14 rounded-full bg-page ring-1 ring-white/15" />
-
-          <div className="mt-3 flex items-center justify-between font-mono text-xs text-muted">
-            <span>DEVELOPER ID</span>
-            <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_10px_var(--accent)]" />
-          </div>
-
-          <div className="mt-3 aspect-[4/5] overflow-hidden rounded-lg">
-            <Photo src={profile.photo} alt={`Portrait of ${profile.name}`} />
-          </div>
-
-          <p className="mt-4 text-xl leading-tight font-bold uppercase">
-            <Field value={profile.name} />
-          </p>
-          <p className="mt-1 text-sm text-muted">
-            <Field value={profile.role} />
-          </p>
-
-          <div aria-hidden className="barcode mt-4 h-7 opacity-70" />
-        </div>
-      </div>
-    </div>
-  );
-}
+import HangingIdCard from "./HangingIdCard.jsx";
 
 function FloatingCard({ icon: Icon, label, className, children }) {
   return (
@@ -154,7 +103,9 @@ export default function Hero() {
 
         {/* First on mobile, so the lanyard still hangs directly from the nav. */}
         <div className="order-first flex justify-center lg:order-last">
-          <HangingIdCard />
+          <div className="hidden dark:block">
+            <HangingIdCard photo={profile.photo} name={profile.name} role={profile.role} />
+          </div>
           <FramedPortrait />
         </div>
       </div>
