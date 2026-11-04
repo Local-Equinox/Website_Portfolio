@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
@@ -46,6 +47,7 @@ export default function App() {
         </main>
       )}
       <Footer />
+      <Analytics />
     </>
   );
 }

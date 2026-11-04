@@ -83,8 +83,8 @@ export const downloads = {
 // Used on the Privacy page.
 export const privacy = {
   // [INSERT: HOSTING PROVIDER (e.g., GitHub Pages, Vercel, Netlify)]
-  hostingProvider: "GitHub Pages, Vercel]",
+  hostingProvider: "GitHub Pages, Vercel",
 
   // Change this date whenever you change the Privacy page.
-  lastUpdated: "November 3, 2026",
+  lastUpdated: "November 4, 2026",
 };

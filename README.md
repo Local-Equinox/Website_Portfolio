@@ -49,4 +49,8 @@ Google Drive share links also work once the file is shared with "Anyone with the
 
 ## Privacy page
 
-The page is in `src/components/Privacy.jsx` and opens at `#privacy`. Set your host in `privacy.hostingProvider` in `src/content.js`. The page says the site has no analytics or tracking cookies, so update it if you ever add them.
+The page is in `src/components/Privacy.jsx` and opens at `#privacy`. Set your host in `privacy.hostingProvider` in `src/content.js`. The page describes Vercel Web Analytics, so update it if you add or change any tracking.
+
+## Analytics
+
+Visitor counts use [Vercel Web Analytics](https://vercel.com/docs/analytics). Enable it for the project in the Vercel dashboard, then deploy. Data is only collected on the Vercel deployment, and the numbers appear under **Analytics** in the dashboard.
