@@ -30,19 +30,19 @@ export const profile = {
 // [INSERT: TECH STACK ARRAY (e.g., Java, Python, React)]
 // Write one string per technology: ["Java", "Python", "React"]
 // The first 4 also appear on the floating card in the light-mode hero.
-export const techStack = ["Java", "Python", "React", "CSS", "HTML"];
+export const techStack = ["Java", "Python", "React", "JavaScript", "CSS", "HTML"];
 
 // Add or remove objects here to change how many projects are shown.
 // `image`, `liveUrl` and `repoUrl` are optional: use "" to leave one out.
 export const projects = [
   {
     // [INSERT: PORTFOLIO PROJECT 1 DETAILS]
-    title: "[INSERT: PORTFOLIO PROJECT 1 DETAILS: TITLE]",
-    description: "[INSERT: PORTFOLIO PROJECT 1 DETAILS: 1-2 SENTENCE DESCRIPTION]",
-    tech: ["[INSERT: PROJECT 1 TECH USED]"],
-    image: "[INSERT: PROJECT 1 IMAGE (e.g., images/project-1.jpg)]",
-    liveUrl: "[INSERT: PROJECT 1 LIVE DEMO URL]",
-    repoUrl: "[INSERT: PROJECT 1 GITHUB REPO URL]",
+    title: "VoiceED",
+    description: "Co-developed, VoiceED, a student-driven platform engineered to ensure learners are heard, supported, and inspired. By bridging modern technology with empathy, VoiceED unifies incident reporting, mental wellness, peer motivation, and collaborative study resources into a single accessible hub.",
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    image: "images/project-1.png",
+    liveUrl: "https://hannbella011.github.io/VoiceED/",
+    repoUrl: "https://github.com/HannBella011/VoiceED",
   },
   {
     // [INSERT: PORTFOLIO PROJECT 2 DETAILS]
@@ -62,6 +62,7 @@ export const socials = [
   { label: "GitHub", icon: "github", url: "https://github.com/Local-Equinox" },
   { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/johnerwincadiz/" },
   { label: "Email", icon: "mail", url: "mailto:johnerwincadiz20@gmail.com" },
+  { label: "Instagram", icon: "intagram", url: "https://www.instagram.com/gah.gah7/"}
 ];
 
 // Download links for the footer's "Resume" link and the About section's
