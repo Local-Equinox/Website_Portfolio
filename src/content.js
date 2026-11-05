@@ -74,21 +74,40 @@ export const projects = [
 export const certificates = [
   {
     // [INSERT: CERTIFICATE 1 DETAILS]
-    title: "[INSERT: CERTIFICATE 1 TITLE]",
-    issuer: "[INSERT: CERTIFICATE 1 ISSUING ORGANIZATION]",
-    date: "[INSERT: CERTIFICATE 1 DATE (e.g., June 2026)]",
-    image: "[INSERT: CERTIFICATE 1 IMAGE (e.g., images/certificate-1.jpg)]",
-    url: "[INSERT: CERTIFICATE 1 VERIFICATION LINK]",
+    title: "Quantum Computing and Cybersecurity Lecture Series 2026",
+    issuer: "Quantum Computing Society of the Philippines",
+    date: "June 2026",
+    image: "images/QCSP_Cert.png",
+    url: "https://verified.sertifier.com/en/verify/88341954830960/?ref=email",
   },
   {
-    // [INSERT: CERTIFICATE 2 DETAILS]
-    title: "[INSERT: CERTIFICATE 2 TITLE]",
-    issuer: "[INSERT: CERTIFICATE 2 ISSUING ORGANIZATION]",
-    date: "[INSERT: CERTIFICATE 2 DATE (e.g., June 2026)]",
-    image: "[INSERT: CERTIFICATE 2 IMAGE (e.g., images/certificate-2.jpg)]",
-    url: "[INSERT: CERTIFICATE 2 VERIFICATION LINK]",
+    title: "KadaKareer Packetworx Workshop 1",
+    issuer: "KadaKareer",
+    date: "April 2026",
+    image: "images/Packetworx_1.jpg",
+    url: "",
   },
-
+  {
+    title: "KadaKareer Packetworx Workshop 2",
+    issuer: "KadaKareer",
+    date: "April 2026",
+    image: "images/Packetworx_2.jpg",
+    url: "",
+  },
+  {
+    title: "KadaKareer Packetworx Workshop 3",
+    issuer: "KadaKareer",
+    date: "April 2026",
+    image: "images/Packetworx_3.jpg",
+    url: "",
+  },
+  {
+    title: "AI for Oceans",
+    issuer: "code.org",
+    date: "August 2025",
+    image: "images/AI_for_Oceans.png",
+    url: "",
+  },
   /* template for certs
   {
     // [INSERT: CERTIFICATE 2 DETAILS]
@@ -107,30 +126,29 @@ export const education = [
   {
     // [INSERT: ELEMENTARY SCHOOL DETAILS]
     level: "Elementary",
-    school: "[INSERT: ELEMENTARY SCHOOL NAME]",
+    school: "Linamon Central School",
     program: "",
-    years: "[INSERT: ELEMENTARY YEARS (e.g., 2012 - 2018)]",
+    years: "2013 - 2019",
   },
   {
     // [INSERT: JUNIOR HIGH SCHOOL DETAILS]
     level: "Junior High School",
-    school: "[INSERT: JUNIOR HIGH SCHOOL NAME]",
+    school: "Our Lady of Perpetual Help Academy",
     program: "",
-    years: "[INSERT: JUNIOR HIGH YEARS (e.g., 2018 - 2022)]",
+    years: "2019 - 2023",
   },
   {
     // [INSERT: SENIOR HIGH SCHOOL DETAILS]
     level: "Senior High School",
-    school: "[INSERT: SENIOR HIGH SCHOOL NAME]",
-    program: "[INSERT: SENIOR HIGH STRAND (e.g., STEM)]",
-    years: "[INSERT: SENIOR HIGH YEARS (e.g., 2022 - 2024)]",
+    school: "Our Lady of Perpetual Help Academy",
+    program: "STEM",
+    years: "2022 - 2025",
   },
   {
     level: "College",
     school: "Mindanao State University - Iligan Institute of Technology (MSU-IIT)",
     program: "BS in Information Technology, 2nd Year",
-    // [INSERT: COLLEGE YEARS (e.g., 2024 - Present)]
-    years: "[INSERT: COLLEGE YEARS (e.g., 2024 - Present)]",
+    years: "2025 - Present",
   },
 ];
 
@@ -140,8 +158,8 @@ export const education = [
 export const socials = [
   { label: "GitHub", icon: "github", url: "https://github.com/Local-Equinox" },
   { label: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/johnerwincadiz/" },
+  { label: "Instagram", icon: "instagram", url: "https://www.instagram.com/gah.gah7/"},
   { label: "Email", icon: "mail", url: "mailto:johnerwincadiz20@gmail.com" },
-  { label: "Instagram", icon: "instagram", url: "https://www.instagram.com/gah.gah7/"}
 ];
 
 // Download links for the footer's "Resume" link and the About section's
