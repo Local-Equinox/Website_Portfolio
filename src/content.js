@@ -46,12 +46,12 @@ export const projects = [
   },
   {
     // [INSERT: PORTFOLIO PROJECT 2 DETAILS]
-    title: "[INSERT: PORTFOLIO PROJECT 2 DETAILS: TITLE]",
-    description: "[INSERT: PORTFOLIO PROJECT 2 DETAILS: 1-2 SENTENCE DESCRIPTION]",
-    tech: ["[INSERT: PROJECT 2 TECH USED]"],
-    image: "[INSERT: PROJECT 2 IMAGE (e.g., images/project-2.jpg)]",
-    liveUrl: "[INSERT: PROJECT 2 LIVE DEMO URL]",
-    repoUrl: "[INSERT: PROJECT 2 GITHUB REPO URL]",
+    title: "3D Solar System Explorer",
+    description: "A browser-based, interactive 3D solar system simulation and exploration game. What began as a visual mapping of our solar system evolved into a fully playable web experience. Users can pilot a spaceship, warp between celestial bodies, and seamlessly land on solid planets to explore the surface on foot.",
+    tech: ["React", "Three.js", "React Three Fiber (R3F)", "Rapier", "ecctrl", "HTML", "CSS", "NASA 3D Resources"],
+    image: "images/Solar_System_Game.png",
+    liveUrl: "https://local-equinox.github.io/Solar_System_3D/",
+    repoUrl: "https://github.com/Local-Equinox/Solar_System_3D",
   },
 
   /* template
