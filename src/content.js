@@ -124,18 +124,10 @@ export const certificates = [
 // optional: use "" to leave it out.
 export const education = [
   {
-    // [INSERT: ELEMENTARY SCHOOL DETAILS]
-    level: "Elementary",
-    school: "Linamon Central School",
-    program: "",
-    years: "2013 - 2019",
-  },
-  {
-    // [INSERT: JUNIOR HIGH SCHOOL DETAILS]
-    level: "Junior High School",
-    school: "Our Lady of Perpetual Help Academy",
-    program: "",
-    years: "2019 - 2023",
+    level: "College",
+    school: "Mindanao State University - Iligan Institute of Technology (MSU-IIT)",
+    program: "BS in Information Technology, 2nd Year",
+    years: "2025 - Present",
   },
   {
     // [INSERT: SENIOR HIGH SCHOOL DETAILS]
@@ -145,10 +137,18 @@ export const education = [
     years: "2022 - 2025",
   },
   {
-    level: "College",
-    school: "Mindanao State University - Iligan Institute of Technology (MSU-IIT)",
-    program: "BS in Information Technology, 2nd Year",
-    years: "2025 - Present",
+    // [INSERT: JUNIOR HIGH SCHOOL DETAILS]
+    level: "Junior High School",
+    school: "Our Lady of Perpetual Help Academy",
+    program: "",
+    years: "2019 - 2023",
+  },
+  {
+    // [INSERT: ELEMENTARY SCHOOL DETAILS]
+    level: "Elementary",
+    school: "Linamon Central School",
+    program: "",
+    years: "2013 - 2019",
   },
 ];
 
