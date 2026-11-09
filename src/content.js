@@ -111,8 +111,8 @@ export const certificates = [
   {
     // [INSERT: CERTIFICATE 2 DETAILS]
     title: "Recognition in Showcasing Output",
-    issuer: "KadaKareer]",
-    date: "[October 2026]",
+    issuer: "KadaKareer",
+    date: "October 2026",
     image: "images/KadaKareer Recognition.jpg",
     url: "",
   },
