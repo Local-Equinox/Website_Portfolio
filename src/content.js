@@ -36,7 +36,6 @@ export const techStack = ["Java", "Python", "React", "JavaScript", "CSS", "HTML"
 // `image`, `liveUrl` and `repoUrl` are optional: use "" to leave one out.
 export const projects = [
   {
-    // [INSERT: PORTFOLIO PROJECT 1 DETAILS]
     title: "VoiceED",
     description: "Co-developed, VoiceED, a student-driven platform engineered to ensure learners are heard, supported, and inspired. By bridging modern technology with empathy, VoiceED unifies incident reporting, mental wellness, peer motivation, and collaborative study resources into a single accessible hub.",
     tech: ["HTML5", "CSS3", "JavaScript"],
@@ -45,7 +44,6 @@ export const projects = [
     repoUrl: "https://github.com/HannBella011/VoiceED",
   },
   {
-    // [INSERT: PORTFOLIO PROJECT 2 DETAILS]
     title: "3D Solar System Explorer",
     description: "A browser-based, interactive 3D solar system simulation and exploration game. What began as a visual mapping of our solar system evolved into a fully playable web experience. Users can pilot a spaceship, warp between celestial bodies, and seamlessly land on solid planets to explore the surface on foot.",
     tech: ["React", "Three.js", "React Three Fiber (R3F)", "Rapier", "ecctrl", "HTML", "CSS", "NASA 3D Resources"],
@@ -53,7 +51,14 @@ export const projects = [
     liveUrl: "https://local-equinox.github.io/Solar_System_3D/",
     repoUrl: "https://github.com/Local-Equinox/Solar_System_3D",
   },
-
+  {
+    title: "Left Behind",
+    description: "Left Behind is a free 3D browser game where you play a young space archaeologist who finds 17 real pieces of NASA hardware and learns why each was left behind. It answers the challenge 'Abandoned but Not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars.'",
+    tech: ["TypeScript", "Raect 19", "Rapier", "Three.js", "React Three Fiber", "drei; Draco-compressed GLB models"],
+    image: "public/images/LeftBehind Web Game.png",
+    liveUrl: "https://local-equinox.github.io/-NASA-Space-Apps-2026-Aeterna/intro.html",
+    repoUrl: "https://github.com/Local-Equinox/-NASA-Space-Apps-2026-Aeterna",
+  },
   /* template
   {
     // [INSERT: PORTFOLIO PROJECT 2 DETAILS]
@@ -73,7 +78,6 @@ export const projects = [
 // one out.
 export const certificates = [
   {
-    // [INSERT: CERTIFICATE 1 DETAILS]
     title: "Quantum Computing and Cybersecurity Lecture Series 2026",
     issuer: "Quantum Computing Society of the Philippines",
     date: "June 2026",
@@ -109,11 +113,24 @@ export const certificates = [
     url: "",
   },
   {
-    // [INSERT: CERTIFICATE 2 DETAILS]
     title: "Recognition in Showcasing Output",
     issuer: "KadaKareer",
     date: "October 2026",
     image: "images/KadaKareer Recognition.jpg",
+    url: "",
+  },
+  {
+    title: "NASA Space Apps Challenge Galactic Problem Solver",
+    issuer: "NASA Space Apps Challenge",
+    date: "November 15, 2026",
+    image: "images/NASA Space Apps Cert (online).png",
+    url: "",
+  },
+  {
+    title: "NASA Space Apps Challenge Certificate of Recognition",
+    issuer: "NASA Space Apps Challenge Iligan",
+    date: "November 15, 2026",
+    image: "images/NASA Space Apps Cert of Recognition .pdf",
     url: "",
   },
   /* template for certs
