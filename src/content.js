@@ -55,7 +55,7 @@ export const projects = [
     title: "Left Behind",
     description: "Left Behind is a free 3D browser game where you play a young space archaeologist who finds 17 real pieces of NASA hardware and learns why each was left behind. It answers the challenge 'Abandoned but Not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars.'",
     tech: ["TypeScript", "Raect 19", "Rapier", "Three.js", "React Three Fiber", "drei; Draco-compressed GLB models"],
-    image: "public/images/LeftBehind_Web_Game.png",
+    image: "images/LeftBehind_Web_Game.png",
     liveUrl: "https://local-equinox.github.io/-NASA-Space-Apps-2026-Aeterna/intro.html",
     repoUrl: "https://github.com/Local-Equinox/-NASA-Space-Apps-2026-Aeterna",
   },
